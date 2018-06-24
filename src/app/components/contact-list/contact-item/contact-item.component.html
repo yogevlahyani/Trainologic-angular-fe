@@ -1,0 +1,9 @@
+<div>
+  <span (click)="toggleList()">{{ contact.name }}</span>
+  <ul *ngIf="showContact">
+    <li *ngFor="let contactChild of contact.contacts">
+      <app-contact-item [contact]="contactChild">
+      </app-contact-item>
+    </li>
+  </ul>
+</div>
